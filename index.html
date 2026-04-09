@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photon Ink AI | The Digital Senior Research Fellow</title>
     
+    <link rel="icon" type="image/png" href="WhatsApp_Image_2026-04-09_at_15.43.28-removebg-preview.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -31,8 +32,6 @@
     <style>
         html { scroll-behavior: smooth; }
         body { background-color: #0A192F; overflow-x: hidden; }
-        
-        /* Premium Ink Gradient */
         .gold-ink-text {
             background: linear-gradient(75deg, #D4AF37 0%, #FBE7A1 50%, #D4AF37 100%);
             -webkit-background-clip: text;
@@ -40,16 +39,12 @@
             background-size: 200% auto;
             animation: shine 4s linear infinite;
         }
-
         @keyframes shine { to { background-position: 200% center; } }
-
-        /* Mobile-Optimized Glass */
         .glass-card {
             background: rgba(17, 34, 64, 0.4);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(212, 175, 55, 0.1);
         }
-
         canvas#particleCanvas {
             position: fixed;
             top: 0; left: 0;
@@ -66,30 +61,32 @@
         <img src="WhatsApp_Image_2026-04-09_at_15.43.28-removebg-preview.png" alt="Logo" class="h-10 w-auto lg:h-14">
         <div class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.3em] text-photonGold">
             <a href="#mission" class="hover:text-white transition-all">Mission</a>
-            <a href="#competencies" class="hover:text-white transition-all">Pillars</a>
-            <a href="#founder" class="hover:text-white transition-all">Leadership</a>
-            <a href="#access" class="hover:text-white transition-all">Access</a>
+            <a href="#pillars" class="hover:text-white transition-all">What We Do</a>
+            <a href="#founder" class="hover:text-white transition-all">Founder</a>
+            <a href="book.html" class="hover:text-white transition-all">Contact</a>
         </div>
         <div class="md:hidden text-photonGold">
-            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16"/></svg>
+            <a href="book.html">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </a>
         </div>
     </nav>
 
     <header class="relative flex flex-col items-center justify-center text-center px-6 py-20 lg:py-40 min-h-[80vh]">
         <div data-aos="fade-up" data-aos-duration="1000">
             <h2 class="text-photonGold uppercase tracking-[0.5em] text-[10px] mb-6 font-semibold">
-                The Digital Senior Research Fellow
+                Your Academic Success Partner
             </h2>
             <h1 class="font-serif text-5xl md:text-7xl lg:text-9xl font-light leading-tight mb-8">
-                Raw Data Meets <br />
-                <span class="italic font-normal gold-ink-text">Scholarly Ink.</span>
+                Turning Ideas Into <br />
+                <span class="italic font-normal gold-ink-text">Landmark Studies.</span>
             </h1>
             <p class="text-slate-400 max-w-xl mx-auto mb-12 text-base md:text-lg font-light leading-relaxed">
-                Bridging the gap between investigative inquiry and the sophisticated requirements of peer-review.
+                We help you turn raw research and fragmented thoughts into high-quality work that gets noticed.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#access" class="bg-photonGold text-photonNavy px-10 py-4 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-white transition-all shadow-xl shadow-photonGold/10">
-                    Initiate Inquiry
+            <div class="flex justify-center">
+                <a href="book.html" class="bg-photonGold text-photonNavy px-10 py-4 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-white transition-all shadow-xl shadow-photonGold/10">
+                    Book Your Space
                 </a>
             </div>
         </div>
@@ -98,14 +95,14 @@
     <section id="mission" class="py-24 px-6 lg:px-16 bg-photonDeep/30">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12" data-aos="fade-up">
             <div class="space-y-6">
-                <span class="text-photonGold text-[10px] uppercase tracking-widest font-bold italic">The Mandate</span>
+                <span class="text-photonGold text-[10px] uppercase tracking-widest font-bold italic">Our Goal</span>
                 <p class="font-serif text-3xl md:text-5xl font-light leading-tight">
-                    A computational research laboratory for high-level scholarly output.
+                    Smart tools for high-level research.
                 </p>
             </div>
             <div class="text-slate-400 space-y-6 text-base md:text-lg font-light lg:border-l lg:border-photonGold/20 lg:pl-12">
-                <p>We operate as a <span class="text-white underline decoration-photonGold/40 underline-offset-4">Senior Research Fellow</span>, prioritizing rigorous inquiry over simple generative output.</p>
-                <p>Ensuring every idea is interrogated, synthesized, and presented with absolute intellectual gravitas.</p>
+                <p>We work as your digital research assistant, helping you think deeper and write better.</p>
+                <p>From organizing your data to polishing your final draft, we ensure your work is clear, professional, and powerful.</p>
             </div>
         </div>
     </section>
@@ -116,80 +113,61 @@
                 <div class="w-20 h-20 rounded-full border border-photonGold/30 flex items-center justify-center text-photonGold font-serif italic text-2xl mx-auto mb-4 bg-photonNavy">
                     MOJ
                 </div>
-                <h3 class="text-photonGold text-xs uppercase tracking-widest font-bold">Founder's Perspective</h3>
+                <h3 class="text-photonGold text-xs uppercase tracking-widest font-bold">A Word From The Founder</h3>
             </div>
             <blockquote class="font-serif text-2xl md:text-4xl italic font-light leading-snug mb-8">
-                "The challenge is no longer finding data, but articulating its significance. We provide the expertise of a world-class fellow at the speed of silicon."
+                "Finding data is easy, but making it meaningful is the real challenge. We help you bridge that gap with speed and precision."
             </blockquote>
             <div class="space-y-2">
                 <p class="text-white font-semibold tracking-wide text-lg">Moses Omuya Jonathan</p>
-                <a href="mailto:jonathan@photoninkai.com" class="text-photonGold text-sm hover:text-white transition-colors underline decoration-photonGold/20 underline-offset-4">
+                <a href="mailto:jonathan@photoninkai.com" class="text-photonGold text-sm hover:text-white transition-colors underline underline-offset-4">
                     jonathan@photoninkai.com
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="competencies" class="py-24 px-6 lg:px-16 max-w-7xl mx-auto">
-        <h3 class="text-center text-photonGold text-[10px] uppercase tracking-[0.5em] mb-16 font-bold">Institutional Capabilities</h3>
+    <section id="pillars" class="py-24 px-6 lg:px-16 max-w-7xl mx-auto">
+        <h3 class="text-center text-photonGold text-[10px] uppercase tracking-[0.5em] mb-16 font-bold">How We Help You</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
-            {[
-                { t: "Dialectical Precision", d: "Arguments crafted to resist the highest levels of critical peer-scrutiny." },
-                { t: "Strategic Synthesis", d: "Unifying disparate datasets into a single, authoritative scholarly voice." },
-                { t: "High-Impact Rhetoric", d: "Elevating technical prose to the stylistic caliber of elite global journals." },
-                { t: "Theoretical Stress-Testing", d: "Pre-emptive identification of logical gaps before the peer-review phase." }
-            ].map((p, i) => `
-                <div class="glass-card p-10 hover:border-photonGold transition-all duration-500 group" data-aos="fade-up" data-aos-delay="${i*100}">
-                    <h4 class="font-serif text-2xl mb-4 text-photonGold group-hover:italic transition-all">${p.t}</h4>
-                    <p class="text-slate-400 text-sm md:text-base font-light leading-relaxed">${p.d}</p>
-                </div>
-            `).join('')}
-        </div>
-    </section>
-
-    <section id="access" class="py-24 px-6 lg:px-16 bg-photonDeep">
-        <div class="max-w-4xl mx-auto text-center mb-16">
-            <h2 class="font-serif text-3xl md:text-5xl mb-6">Initiate Membership</h2>
-            <p class="text-slate-400 font-light">Access is restricted to institutional partners. General inquiries: 
-                <a href="mailto:support@photoninkai.com" class="text-photonGold font-medium">support@photoninkai.com</a>
-            </p>
-        </div>
-        
-        <form class="max-w-2xl mx-auto space-y-6" data-aos="fade-up">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input type="text" placeholder="FULL NAME" class="w-full bg-photonNavy border border-white/10 p-4 text-[10px] tracking-widest uppercase focus:border-photonGold outline-none transition-all">
-                <input type="email" placeholder="INSTITUTIONAL EMAIL" class="w-full bg-photonNavy border border-white/10 p-4 text-[10px] tracking-widest uppercase focus:border-photonGold outline-none transition-all">
+            <div class="glass-card p-10 group" data-aos="fade-up">
+                <h4 class="font-serif text-2xl mb-4 text-photonGold">Logical Thinking</h4>
+                <p class="text-slate-400 text-sm md:text-base font-light">We help you build strong arguments that stand up to tough questions.</p>
             </div>
-            <textarea placeholder="PROPOSAL SUMMARY / RESEARCH FOCUS" rows="5" class="w-full bg-photonNavy border border-white/10 p-4 text-[10px] tracking-widest uppercase focus:border-photonGold outline-none transition-all"></textarea>
-            <button class="w-full bg-photonGold text-photonNavy py-5 text-[10px] uppercase tracking-[0.5em] font-bold hover:bg-white transition-all">
-                Submit Inquiry
-            </button>
-        </form>
+            <div class="glass-card p-10 group" data-aos="fade-up" data-aos-delay="100">
+                <h4 class="font-serif text-2xl mb-4 text-photonGold">Smart Synthesis</h4>
+                <p class="text-slate-400 text-sm md:text-base font-light">We take different pieces of info and blend them into one clear voice.</p>
+            </div>
+            <div class="glass-card p-10 group" data-aos="fade-up" data-aos-delay="200">
+                <h4 class="font-serif text-2xl mb-4 text-photonGold">Professional Writing</h4>
+                <p class="text-slate-400 text-sm md:text-base font-light">We polish your technical writing to meet the standards of top journals.</p>
+            </div>
+            <div class="glass-card p-10 group" data-aos="fade-up" data-aos-delay="300">
+                <h4 class="font-serif text-2xl mb-4 text-photonGold">Mistake Checking</h4>
+                <p class="text-slate-400 text-sm md:text-base font-light">We find the weak spots in your logic before anyone else does.</p>
+            </div>
+        </div>
     </section>
 
     <footer class="py-12 border-t border-white/5 text-center px-6">
-        <img src="WhatsApp_Image_2026-04-09_at_15.43.28-removebg-preview.png" alt="Logo" class="h-8 mx-auto mb-8 opacity-50 hover:opacity-100 transition-opacity">
-        <p class="text-[10px] uppercase tracking-[0.5em] text-slate-500">
-            © 2026 Photon Ink AI | Moses Omuya Jonathan, Founder
+        <img src="WhatsApp_Image_2026-04-09_at_15.43.28-removebg-preview.png" alt="Logo" class="h-8 mx-auto mb-8 opacity-50">
+        <p class="text-[10px] uppercase tracking-[0.5em] text-slate-500 mb-2">
+            © 2026 Photon Ink AI
+        </p>
+        <p class="text-[10px] text-slate-600 italic">
+            Questions? <a href="mailto:support@photoninkai.com" class="text-photonGold">support@photoninkai.com</a>
         </p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true });
-
-        // Particle System Script
         const canvas = document.getElementById('particleCanvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
-        
-        function resize() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
+        function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
         window.addEventListener('resize', resize);
         resize();
-
         class Particle {
             constructor() {
                 this.x = Math.random() * canvas.width;
@@ -199,35 +177,19 @@
                 this.speedY = (Math.random() - 0.5) * 0.5;
             }
             update() {
-                this.x += this.speedX;
-                this.y += this.speedY;
-                if (this.x > canvas.width) this.x = 0;
-                if (this.x < 0) this.x = canvas.width;
-                if (this.y > canvas.height) this.y = 0;
-                if (this.y < 0) this.y = canvas.height;
+                this.x += this.speedX; this.y += this.speedY;
+                if (this.x > canvas.width) this.x = 0; if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0; if (this.y < 0) this.y = canvas.height;
             }
-            draw() {
-                ctx.fillStyle = '#D4AF37';
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                ctx.fill();
-            }
+            draw() { ctx.fillStyle = '#D4AF37'; ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill(); }
         }
-
-        function init() {
-            for (let i = 0; i < 80; i++) particles.push(new Particle());
-        }
-
+        function init() { for (let i = 0; i < 80; i++) particles.push(new Particle()); }
         function animate() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => {
-                p.update();
-                p.draw();
-            });
+            particles.forEach(p => { p.update(); p.draw(); });
             requestAnimationFrame(animate);
         }
-        init();
-        animate();
+        init(); animate();
     </script>
 </body>
 </html>
