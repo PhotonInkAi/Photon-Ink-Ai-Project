@@ -62,7 +62,7 @@
         <div class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.3em] text-photonGold">
             <a href="#mission" class="hover:text-white transition-all">Mission</a>
             <a href="#pillars" class="hover:text-white transition-all">What We Do</a>
-            <a href="#founder" class="hover:text-white transition-all">Founder</a>
+            <a href="team.html" class="hover:text-white transition-all">The Team</a>
             <a href="contact.html" class="hover:text-white transition-all">Contact</a>
         </div>
         <div class="md:hidden text-photonGold">
@@ -72,7 +72,7 @@
         </div>
     </nav>
 
-    <header class="relative flex flex-col items-center justify-center text-center px-6 py-20 lg:py-40 min-h-[80vh]">
+    <header class="relative flex flex-col items-center justify-center text-center px-6 py-20 lg:py-32 min-h-[70vh]">
         <div data-aos="fade-up" data-aos-duration="1000">
             <h2 class="text-photonGold uppercase tracking-[0.5em] text-[10px] mb-6 font-semibold">
                 Your Academic Success Partner
@@ -92,6 +92,25 @@
         </div>
     </header>
 
+    <section class="py-12 border-y border-white/5 bg-photonDeep/20">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-around items-center gap-8 text-center" data-aos="fade-up">
+            <div class="group">
+                <span class="text-photonGold block text-[10px] tracking-[0.4em] uppercase mb-2 font-bold opacity-60 group-hover:opacity-100 transition-opacity">Value I</span>
+                <p class="font-serif text-2xl italic">Clarity</p>
+            </div>
+            <div class="w-px h-12 bg-photonGold/20 hidden md:block"></div>
+            <div class="group">
+                <span class="text-photonGold block text-[10px] tracking-[0.4em] uppercase mb-2 font-bold opacity-60 group-hover:opacity-100 transition-opacity">Value II</span>
+                <p class="font-serif text-2xl italic">Integrity</p>
+            </div>
+            <div class="w-px h-12 bg-photonGold/20 hidden md:block"></div>
+            <div class="group">
+                <span class="text-photonGold block text-[10px] tracking-[0.4em] uppercase mb-2 font-bold opacity-60 group-hover:opacity-100 transition-opacity">Value III</span>
+                <p class="font-serif text-2xl italic">Excellence</p>
+            </div>
+        </div>
+    </section>
+
     <section id="mission" class="py-24 px-6 lg:px-16 bg-photonDeep/30">
         <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12" data-aos="fade-up">
             <div class="space-y-6">
@@ -108,21 +127,27 @@
     </section>
 
     <section id="founder" class="py-24 px-6 lg:px-16 relative">
-        <div class="max-w-4xl mx-auto glass-card p-8 md:p-16 text-center" data-aos="zoom-in">
-            <div class="mb-8 inline-block">
-                <div class="w-20 h-20 rounded-full border border-photonGold/30 flex items-center justify-center text-photonGold font-serif italic text-2xl mx-auto mb-4 bg-photonNavy">
-                    MOJ
+        <div class="max-w-5xl mx-auto glass-card p-8 md:p-20 flex flex-col md:flex-row items-center gap-12" data-aos="zoom-in">
+            <div class="relative flex-shrink-0">
+                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full border-2 border-photonGold/30 overflow-hidden shadow-2xl shadow-photonGold/10">
+                    <img src="WhatsApp Image 2026-04-09 at 18.25.02.jpeg" alt="Moses Omuya Jonathan" class="w-full h-full object-cover">
                 </div>
-                <h3 class="text-photonGold text-xs uppercase tracking-widest font-bold">A Word From The Founder</h3>
+                <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-photonGold text-photonNavy px-6 py-2 text-[8px] uppercase font-bold tracking-widest whitespace-nowrap">
+                    Founder & CEO
+                </div>
             </div>
-            <blockquote class="font-serif text-2xl md:text-4xl italic font-light leading-snug mb-8">
-                "Finding data is easy, but making it meaningful is the real challenge. We help you bridge that gap with speed and precision."
-            </blockquote>
-            <div class="space-y-2">
-                <p class="text-white font-semibold tracking-wide text-lg">Moses Omuya Jonathan</p>
-                <a href="mailto:jonathan@photoninkai.com" class="text-photonGold text-sm hover:text-white transition-colors underline underline-offset-4">
-                    jonathan@photoninkai.com
-                </a>
+
+            <div class="text-center md:text-left flex-grow">
+                <h3 class="text-photonGold text-xs uppercase tracking-widest font-bold mb-6">A Word From The Founder</h3>
+                <blockquote class="font-serif text-2xl md:text-3xl italic font-light leading-snug mb-8">
+                    "The challenge is no longer just finding data, but articulating its significance. We help you bridge that gap with the speed of silicon and the precision of a world-class scholar."
+                </blockquote>
+                <div class="space-y-2">
+                    <p class="text-white font-semibold tracking-wide text-lg">Moses Omuya Jonathan</p>
+                    <a href="team.html" class="text-photonGold text-[10px] uppercase tracking-widest hover:text-white transition-all border-b border-photonGold/20 pb-1">
+                        Meet the Full Team →
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -130,19 +155,19 @@
     <section id="pillars" class="py-24 px-6 lg:px-16 max-w-7xl mx-auto">
         <h3 class="text-center text-photonGold text-[10px] uppercase tracking-[0.5em] mb-16 font-bold">How We Help You</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-10">
-            <div class="glass-card p-10 group" data-aos="fade-up">
+            <div class="glass-card p-10 group hover:border-photonGold transition-all duration-500" data-aos="fade-up">
                 <h4 class="font-serif text-2xl mb-4 text-photonGold">Logical Thinking</h4>
                 <p class="text-slate-400 text-sm md:text-base font-light">We help you build strong arguments that stand up to tough questions.</p>
             </div>
-            <div class="glass-card p-10 group" data-aos="fade-up" data-aos-delay="100">
+            <div class="glass-card p-10 group hover:border-photonGold transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
                 <h4 class="font-serif text-2xl mb-4 text-photonGold">Smart Synthesis</h4>
                 <p class="text-slate-400 text-sm md:text-base font-light">We take different pieces of info and blend them into one clear voice.</p>
             </div>
-            <div class="glass-card p-10 group" data-aos="fade-up" data-aos-delay="200">
+            <div class="glass-card p-10 group hover:border-photonGold transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
                 <h4 class="font-serif text-2xl mb-4 text-photonGold">Professional Writing</h4>
                 <p class="text-slate-400 text-sm md:text-base font-light">We polish your technical writing to meet the standards of top journals.</p>
             </div>
-            <div class="glass-card p-10 group" data-aos="fade-up" data-aos-delay="300">
+            <div class="glass-card p-10 group hover:border-photonGold transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
                 <h4 class="font-serif text-2xl mb-4 text-photonGold">Mistake Checking</h4>
                 <p class="text-slate-400 text-sm md:text-base font-light">We find the weak spots in your logic before anyone else does.</p>
             </div>
