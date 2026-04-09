@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Research Space | Photon Ink AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { photonNavy: '#0A192F', photonGold: '#D4AF37', photonDeep: '#060E1A' },
+                    fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-photonNavy text-white font-sans selection:bg-photonGold selection:text-photonNavy">
+
+    <nav class="p-6 border-b border-white/5 flex justify-between items-center">
+        <a href="index.html">
+            <img src="WhatsApp_Image_2026-04-09_at_15.43.28-removebg-preview.png" alt="Logo" class="h-8 lg:h-10">
+        </a>
+        <a href="index.html" class="text-[10px] uppercase tracking-widest text-photonGold hover:text-white transition-all">← Return to Institute</a>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-6 py-16 lg:py-24">
+        <header class="mb-16 text-center">
+            <h2 class="text-photonGold uppercase tracking-[0.4em] text-[10px] mb-4 font-bold">Project Intake</h2>
+            <h1 class="font-serif text-4xl md:text-5xl font-light mb-6">Secure Your Research Space</h1>
+            <p class="text-slate-400 font-light leading-relaxed">
+                Whether it is a PhD thesis, a landmark project, or high-impact industrial research, Photon Ink AI provides the dialectical precision required for excellence.
+            </p>
+        </header>
+
+        <form action="https://formspree.io/f/xqegondy" method="POST" class="space-y-8">
+            <input type="hidden" name="_next" value="thankyou.html">
+            
+            <div class="space-y-2">
+                <label class="text-[10px] uppercase tracking-widest text-photonGold font-bold">Nature of Work</label>
+                <select name="project_type" required class="w-full bg-photonDeep border border-white/10 p-4 text-xs uppercase tracking-widest focus:border-photonGold outline-none appearance-none cursor-pointer">
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="Academic Thesis">Academic Thesis (Masters/PhD)</option>
+                    <option value="Research Paper">Peer-Reviewed Research Paper</option>
+                    <option value="Corporate Project">Corporate Strategic Project</option>
+                    <option value="Technical Manual">Technical/Scientific Manual</option>
+                </select>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                    <label class="text-[10px] uppercase tracking-widest text-photonGold font-bold">Full Name</label>
+                    <input type="text" name="name" required class="w-full bg-photonDeep border border-white/10 p-4 text-xs focus:border-photonGold outline-none transition-all">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[10px] uppercase tracking-widest text-photonGold font-bold">Institutional Email</label>
+                    <input type="email" name="email" required class="w-full bg-photonDeep border border-white/10 p-4 text-xs focus:border-photonGold outline-none transition-all">
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <label class="text-[10px] uppercase tracking-widest text-photonGold font-bold">Project Abstract / Overview</label>
+                <textarea name="abstract" required rows="6" placeholder="Briefly describe the core hypothesis or project scope..." class="w-full bg-photonDeep border border-white/10 p-4 text-xs focus:border-photonGold outline-none transition-all"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-photonGold text-photonNavy py-5 text-[10px] uppercase tracking-[0.5em] font-bold hover:bg-white transition-all shadow-xl shadow-photonGold/5">
+                Book My Space
+            </button>
+        </form>
+    </main>
+
+    <footer class="py-12 text-center opacity-40 text-[10px] uppercase tracking-[0.5em]">
+        © 2026 Photon Ink AI | Secured Scholarly Intake
+    </footer>
+
+</body>
+</html>
