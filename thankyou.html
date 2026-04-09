@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Received | Photon Ink AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { photonNavy: '#0A192F', photonGold: '#D4AF37' },
+                    fontFamily: { serif: ['"Playfair Display"', 'serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-photonNavy text-white flex items-center justify-center min-h-screen p-6">
+
+    <div class="max-w-xl text-center border border-photonGold/20 p-12 md:p-20 bg-photonDeep/40 backdrop-blur-xl">
+        <div class="w-16 h-16 border border-photonGold/40 rounded-full flex items-center justify-center mx-auto mb-8">
+            <svg class="w-8 h-8 text-photonGold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        
+        <h1 class="font-serif text-3xl md:text-4xl italic mb-6">Submission Received.</h1>
+        <p class="text-slate-400 font-light leading-relaxed mb-10">
+            Your project abstract has been successfully queued for dialectical review. A Senior Research Fellow will contact you shortly to discuss the synthesis of your work.
+        </p>
+        
+        <a href="index.html" class="inline-block text-[10px] uppercase tracking-[0.4em] text-photonGold border-b border-photonGold/30 pb-2 hover:text-white hover:border-white transition-all">
+            Return to Homepage
+        </a>
+    </div>
+
+</body>
+</html>
