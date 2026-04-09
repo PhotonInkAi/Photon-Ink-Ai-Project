@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Photon Ink AI</title>
+    <link rel="icon" type="image/png" href="WhatsApp_Image_2026-04-09_at_15.43.28-removebg-preview.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { photonNavy: '#0A192F', photonGold: '#D4AF37', photonDeep: '#060E1A', photonAccent: '#112240' },
+                    fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-btn {
+            background: rgba(212, 175, 55, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .glass-btn:hover {
+            background: rgba(212, 175, 55, 0.15);
+            border-color: #D4AF37;
+            transform: translateY(-5px);
+        }
+        .whatsapp-glow {
+            box-shadow: 0 0 20px rgba(37, 211, 102, 0.1);
+        }
+        .whatsapp-glow:hover {
+            box-shadow: 0 0 30px rgba(37, 211, 102, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-photonNavy text-white font-sans selection:bg-photonGold selection:text-photonNavy">
+
+    <nav class="p-6 border-b border-white/5 flex justify-between items-center bg-photonNavy/80 backdrop-blur-md sticky top-0 z-50">
+        <a href="index.html">
+            <img src="WhatsApp_Image_2026-04-09_at_15.43.28-removebg-preview.png" alt="Logo" class="h-8 lg:h-10">
+        </a>
+        <a href="index.html" class="text-[10px] uppercase tracking-widest text-photonGold hover:text-white transition-all">← Institute Home</a>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-16 lg:py-32">
+        <header class="text-center mb-20" data-aos="fade-up">
+            <h2 class="text-photonGold uppercase tracking-[0.4em] text-[10px] mb-4 font-bold">Get In Touch</h2>
+            <h1 class="font-serif text-4xl md:text-6xl font-light mb-6">Let’s Start a Conversation</h1>
+            <p class="text-slate-400 font-light leading-relaxed max-w-2xl mx-auto text-lg">
+                Your research deserves expert attention. Whether you have a quick question or a major project, we are here to listen.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+            
+            <a href="https://wa.me/2348051251378" target="_blank" class="glass-btn whatsapp-glow p-10 text-center rounded-sm group" data-aos="fade-right">
+                <div class="mb-6 inline-block p-4 rounded-full bg-green-500/10 text-green-500">
+                    <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.474.875 3.129 1.338 4.814 1.339 5.177 0 9.389-4.213 9.392-9.392.002-2.51-.976-4.87-2.755-6.649s-4.139-2.758-6.648-2.759c-5.177 0-9.39 4.213-9.393 9.393-.001 1.774.498 3.504 1.442 5.013l-.938 3.425 3.506-.92zm11.238-6.19c-.3-.15-1.773-.875-2.048-.975s-.475-.15-.675.15-.775.975-.95 1.175-.35.225-.65.075c-.3-.15-1.265-.467-2.41-1.485-.89-.794-1.49-1.775-1.665-2.075s-.019-.462.13-.611c.134-.133.3-.35.45-.525s.2-.3.3-.5.05-.375-.025-.525-.675-1.625-.925-2.225c-.244-.582-.49-.503-.675-.512-.175-.008-.375-.01-.575-.01s-.525.075-.8.375-1.05 1.025-1.05 2.5 1.075 2.9 1.225 3.1c.15.2 2.116 3.23 5.125 4.53 3.01 1.298 3.01.866 3.558.816s1.773-.725 2.023-1.425.25-1.3.175-1.425-.3-.15-.6-.3z"/></svg>
+                </div>
+                <h3 class="font-serif text-2xl mb-2 text-white">Chat on WhatsApp</h3>
+                <p class="text-slate-400 text-sm font-light mb-6">Immediate, direct access for quick inquiries and project updates.</p>
+                <span class="text-photonGold text-xs uppercase tracking-[0.3em] font-bold group-hover:text-green-500 transition-colors">Message Now →</span>
+            </a>
+
+            <a href="tel:+2348051251378" class="glass-btn p-10 text-center rounded-sm group" data-aos="fade-left">
+                <div class="mb-6 inline-block p-4 rounded-full bg-photonGold/10 text-photonGold">
+                    <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </div>
+                <h3 class="font-serif text-2xl mb-2 text-white">Direct Phone Call</h3>
+                <p class="text-slate-400 text-sm font-light mb-6">Prefer a human voice? Call us directly for a brief consultation.</p>
+                <span class="text-photonGold text-xs uppercase tracking-[0.3em] font-bold">+234 805 125 1378</span>
+            </a>
+
+        </div>
+
+        <div class="border border-white/5 bg-photonAccent/20 p-8 md:p-12 text-center" data-aos="fade-up">
+            <h3 class="text-photonGold uppercase tracking-[0.4em] text-[10px] mb-4 font-bold font-sans">General Inquiries</h3>
+            <p class="text-xl md:text-2xl font-light mb-6 font-serif">For detailed proposals and partnerships:</p>
+            <a href="mailto:support@photoninkai.com" class="text-2xl md:text-3xl font-light text-white border-b border-photonGold/30 pb-2 hover:border-photonGold transition-all">
+                support@photoninkai.com
+            </a>
+        </div>
+
+        <div class="mt-20 text-center">
+            <p class="text-slate-500 text-sm italic mb-8">"Ready to submit your full project details?"</p>
+            <a href="book.html" class="inline-block bg-photonGold text-photonNavy px-12 py-5 text-[10px] uppercase tracking-[0.3em] font-bold hover:bg-white transition-all shadow-2xl">
+                Open Project Intake Form
+            </a>
+        </div>
+    </main>
+
+    <footer class="py-12 text-center border-t border-white/5 opacity-50 text-[10px] uppercase tracking-[0.5em]">
+        © 2026 Photon Ink AI | Fast. Reliable. Direct.
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true });</script>
+</body>
+</html>
