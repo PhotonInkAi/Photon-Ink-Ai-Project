@@ -4,55 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Start Your Project | Photon Ink AI</title>
+    
     <link rel="icon" type="image/png" href="WhatsApp_Image_2026-04-09_at_15.43.28-removebg-preview.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { photonNavy: '#0A192F', photonGold: '#D4AF37', photonDeep: '#060E1A' },
-                    fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Inter', 'sans-serif'] }
+                    colors: { 
+                        photonNavy: '#0A192F', 
+                        photonGold: '#D4AF37', 
+                        photonDeep: '#060E1A',
+                        photonAccent: '#112240'
+                    },
+                    fontFamily: { 
+                        serif: ['"Playfair Display"', 'serif'], 
+                        sans: ['Inter', 'sans-serif'] 
+                    }
                 }
             }
         }
     </script>
+    <style>
+        body { background-color: #0A192F; }
+        .glass-input {
+            background: rgba(6, 14, 26, 0.6) !important;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(212, 175, 55, 0.1) !important;
+            transition: all 0.3s ease;
+        }
+        .glass-input:focus {
+            border-color: #D4AF37 !important;
+            background: rgba(17, 34, 64, 0.8) !important;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
-<body class="bg-photonNavy text-white font-sans selection:bg-photonGold selection:text-photonNavy">
+<body class="text-white font-sans selection:bg-photonGold selection:text-photonNavy">
 
-    <nav class="p-6 border-b border-white/5 flex justify-between items-center">
+    <nav class="p-6 border-b border-white/5 flex justify-between items-center bg-photonNavy/80 backdrop-blur-md sticky top-0 z-50">
         <a href="index.html">
             <img src="WhatsApp_Image_2026-04-09_at_15.43.28-removebg-preview.png" alt="Logo" class="h-8 lg:h-10">
         </a>
-        <a href="index.html" class="text-[10px] uppercase tracking-widest text-photonGold hover:text-white transition-all">← Back to Home</a>
+        <a href="index.html" class="text-[10px] uppercase tracking-widest text-photonGold hover:text-white transition-all">← Return Home</a>
     </nav>
 
     <main class="max-w-3xl mx-auto px-6 py-16 lg:py-24">
-        <header class="mb-16 text-center">
+        <header class="mb-16 text-center" data-aos="fade-up">
             <h2 class="text-photonGold uppercase tracking-[0.4em] text-[10px] mb-4 font-bold">Project Intake</h2>
             <h1 class="font-serif text-4xl md:text-5xl font-light mb-6 text-white">Let’s Bring Your Idea to Life</h1>
             <p class="text-slate-400 font-light leading-relaxed max-w-xl mx-auto">
-                Tell us about your work. Whether it’s a big research project, a thesis, or a professional study, we’re here to help you make it perfect.
+                Tell us about your work. Whether it’s a research project, a thesis, or a professional study, we’re here to help you make it perfect.
             </p>
         </header>
 
-        <form action="https://formspree.io/f/xqegondy" method="POST" class="space-y-10">
-            <input type="hidden" name="_next" value="thankyou.html">
+        <form action="https://formspree.io/f/xqegondy" method="POST" class="space-y-10" data-aos="fade-up" data-aos-delay="200">
+            
+            <input type="hidden" name="_next" value="https://photoninkai.github.io/Photon-Ink-Ai-Project/thankyou.html">
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="space-y-3">
                     <label class="text-[10px] uppercase tracking-widest text-photonGold font-bold">Your Full Name</label>
-                    <input type="text" name="name" placeholder="Enter your name" required class="w-full bg-photonDeep border border-white/10 p-4 text-sm focus:border-photonGold outline-none transition-all placeholder:text-slate-600">
+                    <input type="text" name="name" placeholder="Enter your name" required class="glass-input w-full p-4 text-sm focus:outline-none transition-all placeholder:text-slate-600">
                 </div>
                 <div class="space-y-3">
                     <label class="text-[10px] uppercase tracking-widest text-photonGold font-bold">Email Address</label>
-                    <input type="email" name="email" placeholder="email@example.com" required class="w-full bg-photonDeep border border-white/10 p-4 text-sm focus:border-photonGold outline-none transition-all placeholder:text-slate-600">
+                    <input type="email" name="email" placeholder="email@example.com" required class="glass-input w-full p-4 text-sm focus:outline-none transition-all placeholder:text-slate-600">
                 </div>
             </div>
 
             <div class="space-y-3">
                 <label class="text-[10px] uppercase tracking-widest text-photonGold font-bold">What are you working on?</label>
-                <select name="project_type" required class="w-full bg-photonDeep border border-white/10 p-4 text-xs uppercase tracking-widest focus:border-photonGold outline-none cursor-pointer appearance-none">
+                <select name="project_type" required class="glass-input w-full p-4 text-xs uppercase tracking-widest focus:outline-none cursor-pointer appearance-none">
                     <option value="" disabled selected>Select a category</option>
                     <option value="Personal Research">Personal Research</option>
                     <option value="School Project / Thesis">School Project or Thesis</option>
@@ -64,20 +91,20 @@
 
             <div class="space-y-3">
                 <label class="text-[10px] uppercase tracking-widest text-photonGold font-bold">Project or Research Topic</label>
-                <input type="text" name="topic" placeholder="e.g., The Impact of AI on Modern Nursing" required class="w-full bg-photonDeep border border-white/10 p-4 text-sm focus:border-photonGold outline-none transition-all placeholder:text-slate-600">
+                <input type="text" name="topic" placeholder="e.g., The Impact of AI on Modern Nursing" required class="glass-input w-full p-4 text-sm focus:outline-none transition-all placeholder:text-slate-600">
             </div>
 
             <div class="space-y-3">
                 <label class="text-[10px] uppercase tracking-widest text-photonGold font-bold">Brief Description</label>
-                <textarea name="description" required rows="5" placeholder="Tell us a bit more about your goals and what you've done so far..." class="w-full bg-photonDeep border border-white/10 p-4 text-sm focus:border-photonGold outline-none transition-all placeholder:text-slate-600"></textarea>
+                <textarea name="description" required rows="5" placeholder="Tell us a bit more about your goals..." class="glass-input w-full p-4 text-sm focus:outline-none transition-all placeholder:text-slate-600"></textarea>
             </div>
 
             <div class="space-y-3">
                 <label class="text-[10px] uppercase tracking-widest text-photonGold font-bold">What is your desired outcome?</label>
-                <input type="text" name="goal" placeholder="e.g., Publication in a top journal, finishing my PhD, etc." class="w-full bg-photonDeep border border-white/10 p-4 text-sm focus:border-photonGold outline-none transition-all placeholder:text-slate-600">
+                <input type="text" name="goal" placeholder="e.g., Publication, finishing a PhD, etc." class="glass-input w-full p-4 text-sm focus:outline-none transition-all placeholder:text-slate-600">
             </div>
 
-            <button type="submit" class="w-full bg-photonGold text-photonNavy py-5 text-[10px] uppercase tracking-[0.5em] font-bold hover:bg-white transition-all shadow-xl shadow-photonGold/5">
+            <button type="submit" class="w-full bg-photonGold text-photonNavy py-5 text-[10px] uppercase tracking-[0.5em] font-bold hover:bg-white hover:tracking-[0.6em] transition-all duration-500 shadow-xl shadow-photonGold/5">
                 Send My Request
             </button>
         </form>
@@ -87,5 +114,9 @@
         © 2026 Photon Ink AI | Simple. Clear. Powerful.
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 800 });
+    </script>
 </body>
 </html>
