@@ -70,14 +70,13 @@
     <main class="max-w-4xl mx-auto px-6 py-16 lg:py-32">
         <header class="text-center mb-20" data-aos="fade-up">
             <h2 class="text-photonGold uppercase tracking-[0.4em] text-[10px] mb-4 font-bold">Get In Touch</h2>
-            <h1 class="font-serif text-4xl md:text-6xl font-light mb-6">Let’s Start a Conversation</h1>
+            <h1 class="font-serif text-4xl md:text-6xl font-light mb-6 text-white">Let’s Start a Conversation</h1>
             <p class="text-slate-400 font-light leading-relaxed max-w-2xl mx-auto text-lg">
                 Your work deserves expert attention. Whether you have a quick question or a major project, we are here to listen.
             </p>
         </header>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            
             <a href="https://wa.me/2348051251378" target="_blank" class="glass-btn whatsapp-glow p-10 text-center rounded-sm group" data-aos="fade-right">
                 <div class="mb-6 inline-block p-4 rounded-full bg-green-500/10 text-green-500 group-hover:scale-110 transition-transform">
                     <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.474.875 3.129 1.338 4.814 1.339 5.177 0 9.389-4.213 9.392-9.392.002-2.51-.976-4.87-2.755-6.649s-4.139-2.758-6.648-2.759c-5.177 0-9.39 4.213-9.393 9.393-.001 1.774.498 3.504 1.442 5.013l-.938 3.425 3.506-.92zm11.238-6.19c-.3-.15-1.773-.875-2.048-.975s-.475-.15-.675.15-.775.975-.95 1.175-.35.225-.65.075c-.3-.15-1.265-.467-2.41-1.485-.89-.794-1.49-1.775-1.665-2.075s-.019-.462.13-.611c.134-.133.3-.35.45-.525s.2-.3.3-.5.05-.375-.025-.525-.675-1.625-.925-2.225c-.244-.582-.49-.503-.675-.512-.175-.008-.375-.01-.575-.01s-.525.075-.8.375-1.05 1.025-1.05 2.5 1.075 2.9 1.225 3.1c.15.2 2.116 3.23 5.125 4.53 3.01 1.298 3.01.866 3.558.816s1.773-.725 2.023-1.425.25-1.3.175-1.425-.3-.15-.6-.3z"/></svg>
@@ -95,7 +94,6 @@
                 <p class="text-slate-400 text-sm font-light mb-6">Call us directly for a brief consultation.</p>
                 <span class="text-photonGold text-[10px] uppercase tracking-[0.3em] font-bold">+234 805 125 1378</span>
             </a>
-
         </div>
 
         <div class="bg-photonAccent/10 border border-white/5 p-8 md:p-12 mb-12 backdrop-blur-sm" data-aos="fade-up">
@@ -104,23 +102,22 @@
                 <p class="font-serif text-2xl italic">Drop us a note below</p>
             </div>
             
-            <form action="https://formspree.io/f/xqegondy" method="POST" class="space-y-6">
-                <input type="hidden" name="_next" value="https://photoninkai.github.io/Photon-Ink-Ai-Project/thankyou.html">
-                
+            <form id="contact-form" action="https://formspree.io/f/xqegondy" method="POST" class="space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <input type="text" name="name" placeholder="YOUR FULL NAME" required class="p-4 text-[10px] tracking-widest uppercase">
                     <input type="email" name="email" placeholder="YOUR EMAIL ADDRESS" required class="p-4 text-[10px] tracking-widest uppercase">
                 </div>
                 <textarea name="message" placeholder="TELL US WHAT IS ON YOUR MIND..." rows="4" required class="w-full p-4 text-[10px] tracking-widest uppercase"></textarea>
-                <button type="submit" class="w-full bg-photonGold text-photonNavy py-5 text-[10px] uppercase tracking-[0.5em] font-bold hover:bg-white hover:tracking-[0.6em] transition-all duration-500">
+                <button type="submit" id="submit-btn" class="w-full bg-photonGold text-photonNavy py-5 text-[10px] uppercase tracking-[0.5em] font-bold hover:bg-white transition-all duration-500">
                     Send Message Now
                 </button>
+                <p id="form-status" class="hidden text-center text-photonGold text-[10px] mt-4 tracking-[0.3em] uppercase animate-pulse">Processing...</p>
             </form>
         </div>
 
         <div class="border border-white/5 bg-photonAccent/20 p-8 md:p-12 text-center rounded-sm" data-aos="fade-up">
             <h3 class="text-photonGold uppercase tracking-[0.4em] text-[10px] mb-4 font-bold">Email Inquiry</h3>
-            <p class="text-xl font-light mb-4 font-serif text-slate-300">For formal documentation and support:</p>
+            <p class="text-xl font-light mb-4 font-serif text-slate-300 italic">For formal documentation and support:</p>
             <a href="mailto:support@photoninkai.com" class="text-xl md:text-2xl font-light text-white border-b border-photonGold/30 pb-2 hover:border-photonGold transition-all">
                 support@photoninkai.com
             </a>
@@ -135,12 +132,49 @@
     </main>
 
     <footer class="py-12 text-center border-t border-white/5 opacity-50 text-[10px] uppercase tracking-[0.5em]">
-        © 2026 Photon Ink AI | Fast. Reliable. Direct.
+        © 2026 Photon Ink AI | Simple. Clear. Direct.
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true });
+
+        // AJAX Submission Logic to bypass Formspree Paywall Redirect
+        const form = document.getElementById("contact-form");
+        const status = document.getElementById("form-status");
+        const btn = document.getElementById("submit-btn");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const data = new FormData(event.target);
+            
+            status.classList.remove("hidden");
+            btn.disabled = true;
+            btn.style.opacity = "0.5";
+            btn.innerText = "SENDING...";
+
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    // Force the redirect to your custom thank you page
+                    window.location.href = "thankyou.html";
+                } else {
+                    status.innerText = "ERROR IN SUBMISSION. PLEASE TRY AGAIN.";
+                    btn.disabled = false;
+                    btn.style.opacity = "1";
+                }
+            }).catch(error => {
+                status.innerText = "NETWORK ERROR. PLEASE CHECK CONNECTION.";
+                btn.disabled = false;
+                btn.style.opacity = "1";
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
+
+        // Particle System
         const canvas = document.getElementById('particleCanvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
