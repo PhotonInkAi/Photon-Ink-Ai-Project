@@ -36,11 +36,13 @@
             backdrop-filter: blur(4px);
             border: 1px solid rgba(212, 175, 55, 0.1) !important;
             transition: all 0.3s ease;
+            color: white !important;
         }
         .glass-input:focus {
             border-color: #D4AF37 !important;
             background: rgba(17, 34, 64, 0.8) !important;
             transform: translateY(-2px);
+            outline: none;
         }
     </style>
 </head>
@@ -62,24 +64,22 @@
             </p>
         </header>
 
-        <form action="https://formspree.io/f/xqegondy" method="POST" class="space-y-10" data-aos="fade-up" data-aos-delay="200">
-            
-            <input type="hidden" name="_next" value="https://photoninkai.github.io/Photon-Ink-Ai-Project/thankyou.html">
+        <form id="book-form" action="https://formspree.io/f/xqegondy" method="POST" class="space-y-10" data-aos="fade-up" data-aos-delay="200">
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="space-y-3">
                     <label class="text-[10px] uppercase tracking-widest text-photonGold font-bold">Your Full Name</label>
-                    <input type="text" name="name" placeholder="Enter your name" required class="glass-input w-full p-4 text-sm focus:outline-none transition-all placeholder:text-slate-600">
+                    <input type="text" name="name" placeholder="Enter your name" required class="glass-input w-full p-4 text-sm transition-all placeholder:text-slate-600">
                 </div>
                 <div class="space-y-3">
                     <label class="text-[10px] uppercase tracking-widest text-photonGold font-bold">Email Address</label>
-                    <input type="email" name="email" placeholder="email@example.com" required class="glass-input w-full p-4 text-sm focus:outline-none transition-all placeholder:text-slate-600">
+                    <input type="email" name="email" placeholder="email@example.com" required class="glass-input w-full p-4 text-sm transition-all placeholder:text-slate-600">
                 </div>
             </div>
 
             <div class="space-y-3">
                 <label class="text-[10px] uppercase tracking-widest text-photonGold font-bold">What are you working on?</label>
-                <select name="project_type" required class="glass-input w-full p-4 text-xs uppercase tracking-widest focus:outline-none cursor-pointer appearance-none">
+                <select name="project_type" required class="glass-input w-full p-4 text-xs uppercase tracking-widest cursor-pointer appearance-none">
                     <option value="" disabled selected>Select a category</option>
                     <option value="Personal Research">Personal Research</option>
                     <option value="School Project / Thesis">School Project or Thesis</option>
@@ -91,22 +91,23 @@
 
             <div class="space-y-3">
                 <label class="text-[10px] uppercase tracking-widest text-photonGold font-bold">Project or Research Topic</label>
-                <input type="text" name="topic" placeholder="e.g., The Impact of AI on Modern Nursing" required class="glass-input w-full p-4 text-sm focus:outline-none transition-all placeholder:text-slate-600">
+                <input type="text" name="topic" placeholder="e.g., The Impact of AI on Modern Nursing" required class="glass-input w-full p-4 text-sm transition-all placeholder:text-slate-600">
             </div>
 
             <div class="space-y-3">
                 <label class="text-[10px] uppercase tracking-widest text-photonGold font-bold">Brief Description</label>
-                <textarea name="description" required rows="5" placeholder="Tell us a bit more about your goals..." class="glass-input w-full p-4 text-sm focus:outline-none transition-all placeholder:text-slate-600"></textarea>
+                <textarea name="description" required rows="5" placeholder="Tell us a bit more about your goals..." class="glass-input w-full p-4 text-sm transition-all placeholder:text-slate-600"></textarea>
             </div>
 
             <div class="space-y-3">
                 <label class="text-[10px] uppercase tracking-widest text-photonGold font-bold">What is your desired outcome?</label>
-                <input type="text" name="goal" placeholder="e.g., Publication, finishing a PhD, etc." class="glass-input w-full p-4 text-sm focus:outline-none transition-all placeholder:text-slate-600">
+                <input type="text" name="goal" placeholder="e.g., Publication, finishing a PhD, etc." class="glass-input w-full p-4 text-sm transition-all placeholder:text-slate-600">
             </div>
 
-            <button type="submit" class="w-full bg-photonGold text-photonNavy py-5 text-[10px] uppercase tracking-[0.5em] font-bold hover:bg-white hover:tracking-[0.6em] transition-all duration-500 shadow-xl shadow-photonGold/5">
+            <button type="submit" id="submit-btn" class="w-full bg-photonGold text-photonNavy py-5 text-[10px] uppercase tracking-[0.5em] font-bold hover:bg-white hover:tracking-[0.6em] transition-all duration-500 shadow-xl shadow-photonGold/5">
                 Send My Request
             </button>
+            <p id="form-status" class="hidden text-center text-photonGold text-[10px] mt-4 tracking-[0.3em] uppercase animate-pulse">Processing your inquiry...</p>
         </form>
     </main>
 
@@ -117,6 +118,43 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true, duration: 800 });
+
+        // AJAX Submission Logic
+        const form = document.getElementById("book-form");
+        const status = document.getElementById("form-status");
+        const btn = document.getElementById("submit-btn");
+
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const data = new FormData(event.target);
+            
+            status.classList.remove("hidden");
+            btn.disabled = true;
+            btn.style.opacity = "0.5";
+            btn.innerText = "SENDING...";
+
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    // Success: Manually navigate to your thank you page
+                    window.location.href = "thankyou.html";
+                } else {
+                    status.innerText = "OOPS! THERE WAS A PROBLEM. PLEASE TRY AGAIN.";
+                    btn.disabled = false;
+                    btn.style.opacity = "1";
+                    btn.innerText = "SEND MY REQUEST";
+                }
+            }).catch(error => {
+                status.innerText = "NETWORK ERROR. PLEASE CHECK YOUR CONNECTION.";
+                btn.disabled = false;
+                btn.style.opacity = "1";
+                btn.innerText = "SEND MY REQUEST";
+            });
+        }
+        form.addEventListener("submit", handleSubmit);
     </script>
 </body>
 </html>
