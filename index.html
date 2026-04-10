@@ -51,6 +51,24 @@
             z-index: -1;
             opacity: 0.4;
         }
+
+        /* Typewriter Cursor Effect */
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            background-color: #D4AF37;
+            margin-left: 4px;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        
+        /* Floating Pen Animation Container */
+        .ink-flow {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: rgba(212, 175, 55, 0.8);
+            min-height: 1.5em;
+        }
     </style>
 </head>
 <body class="text-white font-sans selection:bg-photonGold selection:text-photonNavy">
@@ -59,20 +77,21 @@
 
     <nav class="flex justify-between items-center p-5 lg:px-16 border-b border-white/5 sticky top-0 bg-photonNavy/80 backdrop-blur-md z-50">
         <img src="WhatsApp_Image_2026-04-09_at_15.43.28-removebg-preview.png" alt="Logo" class="h-10 w-auto lg:h-14">
-        <div class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.3em] text-photonGold">
+        <div class="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.3em] text-photonGold items-center">
             <a href="#mission" class="hover:text-white transition-all">Mission</a>
             <a href="#pillars" class="hover:text-white transition-all">What We Do</a>
             <a href="team.html" class="hover:text-white transition-all">The Team</a>
+            <a href="book.html" class="hover:text-white transition-all px-4 py-2 border border-photonGold/30 rounded-sm">Submit Project</a>
             <a href="contact.html" class="hover:text-white transition-all">Contact</a>
         </div>
         <div class="md:hidden text-photonGold">
-            <a href="contact.html">
-                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <a href="book.html">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
             </a>
         </div>
     </nav>
 
-    <header class="relative flex flex-col items-center justify-center text-center px-6 py-20 lg:py-32 min-h-[70vh]">
+    <header class="relative flex flex-col items-center justify-center text-center px-6 py-20 lg:py-32 min-h-[75vh]">
         <div data-aos="fade-up" data-aos-duration="1000">
             <h2 class="text-photonGold uppercase tracking-[0.5em] text-[10px] mb-6 font-semibold">
                 Your Academic Success Partner
@@ -81,6 +100,11 @@
                 Turning Ideas Into <br />
                 <span class="italic font-normal gold-ink-text">Landmark Studies.</span>
             </h1>
+
+            <div class="mb-12 ink-flow text-lg md:text-xl lg:text-2xl opacity-80 h-8">
+                <span id="typing-text"></span><span class="cursor">|</span>
+            </div>
+
             <p class="text-slate-400 max-w-xl mx-auto mb-12 text-base md:text-lg font-light leading-relaxed">
                 We help you turn raw research and fragmented thoughts into high-quality work that gets noticed.
             </p>
@@ -129,7 +153,7 @@
     <section id="founder" class="py-24 px-6 lg:px-16 relative">
         <div class="max-w-5xl mx-auto glass-card p-8 md:p-20 flex flex-col md:flex-row items-center gap-12" data-aos="zoom-in">
             <div class="relative flex-shrink-0">
-                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full border-2 border-photonGold/30 overflow-hidden shadow-2xl shadow-photonGold/10">
+                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full border-2 border-photonGold/30 overflow-hidden shadow-2xl shadow-photonGold/10 transition-transform hover:scale-105 duration-500">
                     <img src="WhatsApp Image 2026-04-09 at 18.25.02.jpeg" alt="Moses Omuya Jonathan" class="w-full h-full object-cover">
                 </div>
                 <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-photonGold text-photonNavy px-6 py-2 text-[8px] uppercase font-bold tracking-widest whitespace-nowrap">
@@ -187,6 +211,44 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true });
+
+        // AI TYPING ANIMATION (Real-time Ink Spice)
+        const textElement = document.getElementById('typing-text');
+        const phrases = [
+            "Synthesizing high-level data...",
+            "Articulating complex hypotheses...",
+            "Refining peer-reviewed prose...",
+            "Bridging methodology and insight...",
+            "Crafting scholarly impact..."
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            if (isDeleting) {
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                setTimeout(type, 2000); // Wait at end
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(type, 500);
+            } else {
+                setTimeout(type, isDeleting ? 50 : 100);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', type);
+
+        // Particle System
         const canvas = document.getElementById('particleCanvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
