@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Cabinet of Leadership | Photon Ink AI</title>
+    <title>Our Leadership | Photon Ink AI</title>
     
     <link rel="icon" type="image/png" href="WhatsApp_Image_2026-04-09_at_15.43.28-removebg-preview.png">
     
@@ -15,16 +15,8 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { 
-                        photonNavy: '#0A192F', 
-                        photonGold: '#D4AF37', 
-                        photonDeep: '#060E1A', 
-                        photonAccent: '#112240' 
-                    },
-                    fontFamily: { 
-                        serif: ['"Playfair Display"', 'serif'], 
-                        sans: ['Inter', 'sans-serif'] 
-                    }
+                    colors: { photonNavy: '#0A192F', photonGold: '#D4AF37', photonDeep: '#060E1A', photonAccent: '#112240' },
+                    fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Inter', 'sans-serif'] }
                 }
             }
         }
@@ -32,46 +24,37 @@
     <style>
         body { background-color: #0A192F; overflow-x: hidden; }
         .glass-profile {
-            background: rgba(17, 34, 64, 0.4);
+            background: rgba(17, 34, 64, 0.3);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(212, 175, 55, 0.1);
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
         }
-        .founder-glow {
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.1);
+        .glass-profile:hover {
+            border-color: rgba(212, 175, 55, 0.3);
+            background: rgba(17, 34, 64, 0.5);
+            transform: translateY(-5px);
         }
-        .founder-glow:hover {
-            box-shadow: 0 0 50px rgba(212, 175, 55, 0.2);
-            border-color: rgba(212, 175, 55, 0.4);
-        }
-        
-        /* The Expandable "Read More" Content */
         .profile-details {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: max-height 0.8s ease;
         }
         .profile-card.expanded .profile-details {
-            max-height: 2000px; /* Large enough for full content */
+            max-height: 1500px;
         }
-        
         .read-more-btn {
             color: #D4AF37;
             font-size: 10px;
             text-transform: uppercase;
-            tracking: 0.3em;
+            letter-spacing: 0.3em;
             cursor: pointer;
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            padding-bottom: 2px;
+            padding-bottom: 4px;
             transition: all 0.3s ease;
         }
-        .read-more-btn:hover {
-            color: white;
-            border-color: white;
-        }
-        .profile-card.expanded .read-more-btn {
-            color: white;
-            content: "Show Less";
+        /* Specific fix for Christian's Image */
+        .fit-head {
+            object-position: top !important;
         }
     </style>
 </head>
@@ -81,128 +64,91 @@
         <a href="index.html">
             <img src="WhatsApp_Image_2026-04-09_at_15.43.28-removebg-preview.png" alt="Logo" class="h-8 lg:h-10">
         </a>
-        <a href="index.html" class="text-[10px] uppercase tracking-widest text-photonGold hover:text-white transition-all">← Return Home</a>
+        <a href="index.html" class="text-[10px] uppercase tracking-widest text-photonGold hover:text-white transition-all">← Home</a>
     </nav>
 
-    <main class="max-w-7xl mx-auto px-6 py-20 lg:py-32">
+    <main class="max-w-6xl mx-auto px-6 py-20 lg:py-32">
         <header class="text-center mb-28" data-aos="fade-up">
-            <h2 class="text-photonGold uppercase tracking-[0.5em] text-[10px] mb-4 font-bold">The Cabinet</h2>
-            <h1 class="font-serif text-5xl md:text-7xl font-light mb-6 text-white leading-tight">The Minds Behind <br>the Fellow</h1>
-            <p class="text-slate-400 font-light leading-relaxed max-w-2xl mx-auto text-lg">
-                Meeting the multidisciplinary architects shaping the future of elite, AI-driven academic mentorship and scholarly rigor.
+            <h2 class="text-photonGold uppercase tracking-[0.5em] text-[10px] mb-4 font-bold">The Leadership</h2>
+            <h1 class="font-serif text-5xl md:text-7xl font-light mb-6">The People Behind the Fellow</h1>
+            <p class="text-slate-400 font-light max-w-2xl mx-auto text-lg leading-relaxed">
+                A team of experts dedicated to helping you turn your big ideas into world-class work.
             </p>
         </header>
 
-        <div class="space-y-16 lg:space-y-24">
+        <div class="space-y-12">
 
-            <section class="profile-card glass-profile founder-glow flex flex-col md:flex-row items-center gap-12 p-8 md:p-16 rounded-sm" data-aos="fade-up">
-                <img src="WhatsApp Image 2026-04-09 at 18.25.02.jpeg" alt="Jonathan Omuya Moses" class="w-48 h-48 md:w-64 md:h-64 rounded-full object-cover border-2 border-photonGold/20 flex-shrink-0">
-                
-                <div class="flex-grow space-y-6">
-                    <div class="border-l-2 border-photonGold/40 pl-6">
-                        <h3 class="text-photonGold uppercase tracking-[0.3em] text-[10px] font-bold">Founder and CEO</h3>
-                        <h2 class="font-serif text-3xl md:text-5xl font-light text-white italic tracking-tight">Jonathan Omuya Moses</h2>
-                    </div>
-                    
-                    <p class="text-slate-300 font-light leading-relaxed">A forward-thinking strategist redefining the role of AI in the ivory tower, transforming it from a tool of convenience into a foundational partner for global academic excellence.</p>
-                    
-                    <div class="pt-6 border-t border-white/5">
-                        <span class="read-more-btn" onclick="toggleProfile(this)">Read More</span>
-                        
-                        <div class="profile-details mt-10 space-y-10 text-slate-400 font-light leading-relaxed text-sm md:text-base pr-4">
-                            <p> Moses has leveraged his diverse expertise to pioneer a new frontier in edtech. Drawing from agribusiness, finance, and creative design, he built Photon Ink AI into a premier digital institution, bridging the gap between raw data and doctoral-level scholarly discourse.</p>
-                            
-                            <div class="space-y-4">
-                                <h4 class="font-serif text-xl italic text-photonGold">The Visionary Behind the Fellow</h4>
-                                <p>Moses focused on creating an AI agent that transcends simple automation. His vision was to build a "Senior Research Fellow"—a digital intellectual capable of navigating the complexities of peer-reviewed journals, grant applications, and dissertations.</p>
-                            </div>
-
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-photonGold/10 text-xs text-slate-500">
-                                <div><b class="text-photonGold">Democratizing Scholarship:</b> Dedication to empowering researchers, ensuring technical writing barriers do not hinder innovation.</div>
-                                <div><b class="text-photonGold">Strategic Integration:</b> Oversees advanced models, focusing on ethical AI and methodological integrity.</div>
-                                <div><b class="text-photonGold">Multidisciplinary Innovation:</b> Maintains a human-centric approach to complex problem-solving.</div>
+            <section class="profile-card glass-profile p-8 md:p-12 rounded-sm" data-aos="fade-up">
+                <div class="flex flex-col md:flex-row items-center gap-10">
+                    <img src="WhatsApp Image 2026-04-09 at 18.25.02.jpeg" alt="Jonathan Omuya Moses" class="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover border border-photonGold/20 shadow-2xl">
+                    <div class="text-center md:text-left">
+                        <h3 class="text-photonGold uppercase tracking-[0.3em] text-[10px] font-bold mb-2">Founder and CEO</h3>
+                        <h2 class="font-serif text-3xl md:text-5xl font-light mb-4">Jonathan Omuya Moses</h2>
+                        <p class="text-slate-300 font-light leading-relaxed max-w-xl">
+                            A forward-thinking leader who is changing how we use AI in research—turning it from a simple tool into a smart partner for academic success.
+                        </p>
+                        <div class="mt-8">
+                            <span class="read-more-btn" onclick="toggleProfile(this)">Read Full Story</span>
+                            <div class="profile-details mt-8 space-y-6 text-slate-400 text-sm md:text-base font-light">
+                                <p>Moses has a background that mixes business, finance, and design. He used all that experience to build Photon Ink AI, a place where raw information is turned into clear, powerful writing.</p>
+                                <p>His vision was to create a "Senior Research Fellow"—a smart digital assistant that can help with anything from school projects to complex PhD research.</p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-6 border-t border-white/5">
+                                    <p><b class="text-photonGold">His Mission:</b> Helping researchers and students everywhere by removing the stress of technical writing.</p>
+                                    <p><b class="text-photonGold">Our Standard:</b> Making sure every piece of work is honest, accurate, and professional.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12">
-                
-                <section class="profile-card glass-profile p-10 rounded-sm flex flex-col sm:flex-row lg:flex-col items-center gap-10" data-aos="fade-up" data-aos-delay="100">
-                    <img src="WhatsApp Image 2026-04-09 at 18.26.42.jpeg" alt="Nathaniel Inikpi Sophia" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-2 border-photonGold/10 flex-shrink-0">
-                    
-                    <div class="flex-grow space-y-6 lg:text-center">
-                        <div>
-                            <h3 class="text-photonGold uppercase tracking-[0.3em] text-[10px] font-bold">General Manager</h3>
-                            <h2 class="font-serif text-2xl md:text-3xl font-light text-white italic">Nathaniel Inikpi Sophia</h2>
-                        </div>
-                        <p class="text-slate-300 font-light leading-relaxed text-sm">Playing a pivotal role in operationalizing the vision of elite digital academic mentorship, Sophia ensures the highest standards of scholarly integrity.</p>
-                        
-                        <div class="pt-6 border-t border-white/5">
-                            <span class="read-more-btn" onclick="toggleProfile(this)">Read More</span>
-                            
-                            <div class="profile-details mt-10 space-y-8 text-slate-400 font-light leading-relaxed text-sm text-left lg:text-center">
-                                <p>Nathaniel works to make high-level support accessible to a global community. Her leadership style emphasizes precision, reliability, and the ethical integration of AI in education.</p>
-                                <div class="space-y-2">
-                                    <h4 class="font-serif text-lg italic text-photonGold">Leadership & Operations</h4>
-                                    <p>Managing day-to-day operations and bridge the gap between technical development and academic need. Instrumental in refining output protocols for dissertations and peer-reviewed articles.</p>
-                                </div>
-                            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <section class="profile-card glass-profile p-8 md:p-10 rounded-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="WhatsApp Image 2026-04-09 at 18.26.42.jpeg" alt="Nathaniel Inikpi Sophia" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border border-photonGold/20 mb-6">
+                        <h3 class="text-photonGold uppercase tracking-[0.3em] text-[10px] font-bold mb-1">General Manager</h3>
+                        <h2 class="font-serif text-2xl md:text-3xl font-light mb-4">Nathaniel Inikpi Sophia</h2>
+                        <p class="text-slate-300 font-light text-sm leading-relaxed mb-6">
+                            Sophia makes sure everything runs smoothly, keeping our standards high while making our tools easy for everyone to use.
+                        </p>
+                        <span class="read-more-btn" onclick="toggleProfile(this)">Read More</span>
+                        <div class="profile-details mt-6 text-slate-400 text-sm font-light space-y-4">
+                            <p>She bridges the gap between our technology and the people who use it. She is dedicated to making high-level research support available to students and researchers globally.</p>
+                            <p>Her focus is on reliability and making sure our AI behaves like a trusted partner in your academic journey.</p>
                         </div>
                     </div>
                 </section>
 
-                <section class="profile-card glass-profile p-10 rounded-sm flex flex-col sm:flex-row lg:flex-col items-center gap-10" data-aos="fade-up" data-aos-delay="200">
-                    <img src="WhatsApp Image 2026-04-09 at 18.28.15.jpeg" alt="Christian Owotunse" class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-2 border-photonGold/10 flex-shrink-0">
-                    
-                    <div class="flex-grow space-y-6 lg:text-center">
-                        <div>
-                            <h3 class="text-photonGold uppercase tracking-[0.3em] text-[10px] font-bold">Human Resource Manager</h3>
-                            <h2 class="font-serif text-2xl md:text-3xl font-light text-white italic">Christian Owotunse</h2>
-                        </div>
-                        <p class="text-slate-300 font-light leading-relaxed text-sm"> христиан oversees the talent strategy and organizational culture of a pioneering firm in academic artificial intelligence.</p>
-                        
-                        <div class="pt-6 border-t border-white/5">
-                            <span class="read-more-btn" onclick="toggleProfile(this)">Read More</span>
-                            
-                            <div class="profile-details mt-10 space-y-8 text-slate-400 font-light leading-relaxed text-sm text-left lg:text-center">
-                                <p>Christian is responsible for building and sustaining a high-performance team dedicated to the "Senior Research Fellow" standard of excellence.</p>
-                                <div class="space-y-2">
-                                    <h4 class="font-serif text-lg italic text-photonGold">Core Responsibilities</h4>
-                                    <p>Recruiting top professionals at the intersection of tech and academia. Fostering innovation, integrity, and operational excellence through modern HR frameworks.</p>
-                                </div>
-                            </div>
+                <section class="profile-card glass-profile p-8 md:p-10 rounded-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex flex-col items-center text-center">
+                        <img src="WhatsApp Image 2026-04-09 at 18.28.15.jpeg" alt="Christian Owotunse" class="fit-head w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border border-photonGold/20 mb-6">
+                        <h3 class="text-photonGold uppercase tracking-[0.3em] text-[10px] font-bold mb-1">HR Manager</h3>
+                        <h2 class="font-serif text-2xl md:text-3xl font-light mb-4">Christian Owotunse</h2>
+                        <p class="text-slate-300 font-light text-sm leading-relaxed mb-6">
+                            Christian builds the team that powers the AI. He ensures that everyone working behind the scenes is an expert in their field.
+                        </p>
+                        <span class="read-more-btn" onclick="toggleProfile(this)">Read More</span>
+                        <div class="profile-details mt-6 text-slate-400 text-sm font-light space-y-4">
+                            <p>He focuses on finding top talent that understands both technology and education. He has built a culture of innovation and continuous learning at Photon Ink AI.</p>
+                            <p>His goal is to make sure our human team and our AI work together perfectly to give you the best possible results.</p>
                         </div>
                     </div>
                 </section>
-
             </div>
         </div>
     </main>
 
-    <footer class="py-16 text-center border-t border-white/5 opacity-50 px-6 mt-20">
-        <img src="WhatsApp_Image_2026-04-09_at_15.43.28-removebg-preview.png" alt="Logo" class="h-8 mx-auto mb-10 opacity-30">
-        <p class="text-[10px] uppercase tracking-[0.6em] text-slate-500">
-            © 2026 Photon Ink AI | Elite Intellectual Infrastructure
-        </p>
+    <footer class="py-12 text-center border-t border-white/5 opacity-40 text-[10px] uppercase tracking-[0.5em]">
+        © 2026 Photon Ink AI | Built for Excellence
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ once: true, duration: 1000 });
-
-        // Dynamic "Read More" Toggle Logic
+        AOS.init({ once: true });
         function toggleProfile(btn) {
             const card = btn.closest('.profile-card');
-            
-            if (card.classList.contains('expanded')) {
-                card.classList.remove('expanded');
-                btn.innerText = "Read More";
-            } else {
-                card.classList.add('expanded');
-                btn.innerText = "Show Less";
-            }
+            card.classList.toggle('expanded');
+            btn.innerText = card.classList.contains('expanded') ? "Show Less" : "Read Full Story";
         }
     </script>
 </body>
